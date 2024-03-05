@@ -1,0 +1,1009 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 0fr 2fr 0.3fr ;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra        barra"
+    "login         login        login        login"
+    "productos     productos    nuevo        nuevo"
+    "productos     productos    nuevo        nuevo"
+    "pie           pie          pie          pie" ;
+}
+
+.grid-container-rese{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 2fr 3fr;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra        barra"
+    "productos     productos    nuevo        nuevo"
+    "productos     productos    nuevo        nuevo"
+    "pie           pie          pie          pie" ;
+}
+
+.grid-container-rese-bosque{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 2fr 3fr;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra        barra"
+    "productos     productos    nuevo        nuevo"
+    "productos     productos    nuevo        nuevo"
+    "pie           pie          pie          pie" ;
+
+}
+
+.grid-container-generos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 0fr 1fr 1fr ;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra          barra"
+    "toda          toda         toda           toda"
+    "nuevo         nuevo        nuevo          nuevo"
+    "nuevo         nuevo        nuevo          nuevo"
+    "pie           pie          pie            pie" ;
+}
+
+.grid-container-productos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 0fr 1fr 1fr ;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra          barra"
+    "libros        libros       libros         libros"
+    "libros        libros       libros         libros"
+    "libros        libros       libros         libros"
+    "pie           pie          pie            pie" ;
+}
+
+/* Header -------------------------------*/
+
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+    color: #ddd;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: left;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #ccc;
+}
+
+.search-form {
+    display: flex;
+    margin-left: auto;
+}
+
+.form-control {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+}
+
+
+.btn-outline-success{
+    border: #fbefe5;
+    background-color: #ffffff;
+    margin-right: 1rem;
+}
+.btn-var{
+    color: #743a11;
+}
+
+.navbar-rese{
+    grid-area: barra ;
+}
+
+.navbar{
+    background-color:  #491a1a40;
+    grid-area: barra ;
+    /* width: 100%; */
+}
+
+.form-group {
+    margin-bottom: 10px; 
+    text-align: right;
+}
+
+
+.navbar--barra{
+    background-color:  #491a1a40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300%;
+}
+
+.navbar--barra nav{
+    width: 100%;
+    margin-right: 50px;
+    border-radius: 8px;
+    text-align: left ;
+}
+.navbar--barra nav ul{
+    display: flex;
+    gap: 1rem;
+}
+.navbar--barra nav ul li{
+    list-style: none;
+}
+.navbar--barra nav ul li a{
+    text-decoration: none;
+    color: #743a11;
+}
+ /* Tamaño logo*/ 
+.d-block-w-100{
+    width: 10%;
+    padding: 1rem;
+    border-radius: 8px;
+} 
+
+.cont-logo{
+    width: 150px;
+    padding: 1rem;
+}
+.cont-logo img{
+    width: 100%;
+    border-radius: 30px;
+}
+.navbar--banner {
+    grid-area: login;
+    background-image: url('../assets/portada.jpg');
+    background-size: cover;  
+    background-position: center; 
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.navbar--banner-promo{
+    width: auto;
+}
+.navbar--banner-promo p{
+    font-size: 4rem;
+    text-align: center;
+    color: #743a11;
+}
+/*form-banner*/
+.navbar--banner-form{
+    width: 50%;
+    background-color: #743a1152;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    color: #000000;
+}
+.btn-j{
+    background-color: #743a11;
+    color: #ffffff;
+    padding: 0.4rem;
+    margin: 0.6rem;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+}
+
+.btn{
+    background-color: rgb(118, 156, 132);
+    padding: 0.4rem;
+    margin: 0.6rem;
+    border-radius: 6px;
+    padding: 0.4rem;
+    margin: 0.6rem;
+    margin-left: 3rem;
+
+}
+.title-center{
+    text-align: center;
+}
+
+/* Main ---------------------------------------*/
+.libros{
+    grid-area: libros;
+}
+
+.generos-card-productos {
+    display: flex;
+    overflow-x: auto; /* Añade una barra de desplazamiento horizontal si hay muchos elementos */
+  }
+
+  .card-body-productos {
+    flex: 0 0 auto; /* Establece el tamaño flexible a auto para mantener el tamaño original del contenido */
+    margin-right: 10px; /* Agrega un pequeño margen a la derecha de cada tarjeta */
+  }
+.ficcion {
+    display: flex;
+    justify-content: space-between; /* Ajusta el espacio entre los divs */
+    gap: 1rem;
+}
+
+.generos-card-productos{
+    grid-area: nuevo;
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    /* box-shadow: 0px 0px 30px #000000; */
+    text-align: center;
+}
+
+.generos-card {
+    grid-area: nuevo;
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    /* box-shadow: 0px 0px 30px #000000; */
+    text-align: center;
+}
+
+.contenido-generos{
+    grid-area: toda;
+    padding: 20px;
+    background-image: url('../assets/fondogeneros.jpg');
+    background-size: cover;  
+    background-position: center; 
+}
+
+.card-body-generos {
+    border: 6px solid #000;
+    border-radius: 25px; 
+    margin-bottom: 20px; 
+    padding: 15px; 
+    /* background-color: #7f6d5c; */
+    text-align: center
+}
+
+.card-body {
+    border: 2px solid #000;
+    border-radius: 25px; 
+    margin-bottom: 20px; 
+    padding: 15px; 
+    background-color: rgba(127, 109, 92, 0.9);
+    text-align: center
+}
+
+
+.card-body h2 {
+    margin-bottom: 10px; 
+    color: #fbefe5; 
+}
+
+.card-body p {
+    margin: 8px 0; /* Espaciado entre párrafos */
+    color: #fbefe5; 
+}
+
+
+
+.center {
+    text-align: center;
+    margin: 10px; /* Elimina el margen predeterminado */
+}
+.color{
+    background-color: red;
+}
+.col{
+    grid-area: nuevo;
+}
+
+.col h1, .col h2, .col h3, .col h4, .col p {
+    margin-bottom: 30px; /* Ajusta el valor según tus necesidades */
+}
+.contenedor-rese{
+    grid-area: producto;
+    background-color: #743a11;
+}
+
+.imagen-rese{
+    grid-area: nuevo;
+    width: 100px;
+}
+
+.imagen{
+    width: 100px;
+}
+
+.contenido-rese .col {
+    border: 5px solid #ddd; /* Ancho y color del borde */
+    padding: 20px; /* Espaciado interno para mejorar la apariencia */
+    border-radius: 10px; /* Borde redondeado */
+    margin-right: 3rem;
+}
+
+.btn.btn-primary {
+    width: 80%; /* Ancho del botón al 100% del contenedor */
+    padding: 10px; /* Espaciado interno para mejorar la apariencia */
+
+}
+
+.btn.btn-primary.btn-sm{
+    margin-left: 1px;
+}
+.card-res {
+    grid-area: productos;
+    /* width: 185px; */
+    overflow: hidden;
+    margin: auto; /* Añade esta línea para centrar horizontalmente */
+    margin-bottom: 10rem;
+    margin-right: 22rem;
+    box-shadow: 0px 0px 30px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 90%; */
+}
+
+
+.cardflex{
+    margin: 1rem;
+    justify-content: space-evenly;
+  }
+
+.separador{
+    width: 17rem;
+    background-color: #743a1152;
+
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    height: 12rem;
+    padding: 1rem;
+    margin: 1rem;
+    margin-left: auto;
+
+  }
+.contenido-rese{
+    grid-area: nuevo;
+    margin-top: 70px;
+    margin-right: 80px;
+    font-size: 16px; 
+    margin-right: leg;
+    
+}
+
+.contenido-principal{
+    margin: 30px 200px 50px;
+    grid-area: productos ;
+
+}
+.title{
+    font-weight: 400;
+    color: #743a11;
+    text-align: center;
+}
+.sub-title{
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom:-0.5rem ;
+    /* color: #000000; */
+}
+.card-flex{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    flex-flow: wrap;
+    width: 100%;
+    height: auto;
+}
+.card{
+    width: 185px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 30px #000000;
+    text-align: center;
+
+}
+.card img{
+    width: 100%;
+}
+.card p{
+    line-height: 36px;
+}
+.border{
+    border-radius: 8px;
+}
+
+
+.title-galeria{
+    letter-spacing: 7px;
+}
+
+/*new in*/
+
+.lateral{
+    grid-area: nuevo;
+}
+
+.lateral-cont{
+    display: flex;
+    padding-top: 45px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px; /* Puedes ajustar este valor según tus necesidades */
+    margin: 0 auto; 
+}
+.lateral-cont-img{
+    width: 44%;
+    height: 245px;
+    overflow: hidden;
+}
+.lateral-cont-img img{
+    width: 100%;
+}
+.lateral-txt{
+    width: 50%;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+    color: #000000; 
+}
+/*footer---------------------------------------------*/
+footer{
+    background-color:  #fbefe5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: pie ;
+}
+
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color: #743a11;
+}
+footer img{
+    /*Tamaño del logo en footer*/
+    width: 2rem;
+}
+
+.custom-search-btn {
+    background-color: #ff0000; 
+    color: #ffffff; 
+  }
+@media (min-width:320px) and (max-width: 374px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: -0.7fr 1fr 0fr;
+        grid-template-areas: 
+        "barra"
+        "login"
+        "productos"
+        "nuevo"
+        "pie";
+    }
+
+    .grid-container-rese{
+        display: grid;
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: 0fr 1fr 1fr 1fr;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra"
+        "productos"
+        "nuevo"
+        "pie" ;
+    
+    }
+
+    .grid-container-rese-bosque{
+        display: grid;
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: 0fr 1fr 2fr 1fr;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra"
+        "productos"
+        "nuevo"
+        "pie" ;
+    
+    }
+
+    .grid-container-generos{
+        display: grid;
+        grid-template-columns: repeat(4,1fr) ;
+        grid-template-rows: 0fr 0fr 1fr 1fr ;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra"
+        "toda"
+        "nuevo"
+        "nuevo"
+        "pie" ;
+    }
+
+    .grid-container-productos{
+        display: grid;
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: 0fr 0fr 1fr 1fr ;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra"
+        "libros"
+        "libros"
+        "libros"
+        "pie" ;
+    }
+    .libros .card-body-generos img {
+        width: 100%; /* Ajusta el ancho al 100% del contenedor */
+        max-width: none; /* Elimina el ancho máximo para permitir que la imagen se ajuste al contenedor */
+      }
+    .generos-card .card-body-generos:nth-last-child(-n+3) {
+        display: none;
+    }
+    .contenido-generos .ficcion .card-body:nth-child(2),
+    .contenido-generos .ficcion .card-body:nth-child(3) {
+      display: none;
+    }
+    
+
+    .generos-card-productos{
+        grid-area: nuevo;
+        display: flex;
+        margin-top: 2rem;
+        margin-left: -0.5rem;
+        margin-bottom: 4rem;
+        justify-content: space-between;
+        /* box-shadow: 0px 0px 30px #000000; */
+        text-align: center;
+    }
+
+    .libros .generos-card-productos .card-body-generos:nth-child(2),
+    .libros .generos-card-productos .card-body-generos:nth-child(3),
+    .libros .generos-card-productos .card-body-generos:nth-child(4) {
+      display: none;
+    }
+    
+    .card-res-bosque {
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        margin-bottom: 10rem;
+        /* margin-right: 12rem; */
+        margin-top: 3rem;
+        box-shadow: 0px 0px 30px #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 90%; */
+    }
+
+    .card-res {
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        margin-bottom: 10rem;
+        /* margin-right: 12rem; */
+        margin-top: 3rem;
+        box-shadow: 0px 0px 30px #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 90%; */
+    }
+    .contenido-rese {
+        grid-area: nuevo;
+        margin-top: 70px;
+        margin-left: 9.5rem;
+        margin-top: 6rem;
+    } 
+
+    .lateral{
+        display: block;
+    }
+    .lateral-txt {
+        padding-bottom: 5rem;
+    }
+    .form-group {
+        margin-bottom: 10px; 
+        text-align: center;
+    }
+    .lateral-cont{
+        margin-bottom: 2rem;
+    }
+    .contenido-principal {
+        margin: 30px 200px -19px;
+        grid-area: productos;
+    }
+    .generos-card {
+        grid-area: nuevo;
+        display: flex;
+        margin-top: 1rem;
+        margin-left: 0rem;
+        margin-bottom: 2rem;
+        justify-content: space-between;
+        /* box-shadow: 0px 0px 30px #000000; */
+        text-align: center;
+    }
+}
+
+
+@media (min-width:375px) and (max-width: 768px){
+    .grid-container{
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: -0.7fr 1fr 0fr;
+        grid-template-areas: 
+        "barra"
+        "login"
+        "productos"
+        "nuevo"
+        "pie";
+    }
+
+    .grid-container-rese{
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: 0fr 1fr 1fr 0fr;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra"
+        "productos"
+        "nuevo"
+        "pie" ;
+    }
+    .grid-container-generos{
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: 0fr 0fr 1fr 2fr ;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra"
+        "toda"
+        "nuevo"
+        "nuevo"
+        "pie" ;
+    }
+
+    .generos-card .card-body-generos:nth-last-child(-n+2) {
+        display: none;
+    }
+    .generos-card {
+        grid-area: nuevo;
+        display: flex;
+        margin-top: 8rem;
+        margin-left: -0.5rem;
+        margin-bottom: 34rem;
+        justify-content: space-between;
+        /* box-shadow: 0px 0px 30px #000000; */
+        text-align: center;
+    }
+    .grid-container-productos{
+        display: grid;
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: 0fr 0fr 1fr 1fr ;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra"
+        "libros"
+        "libros"
+        "libros"
+        "pie" ;
+    }
+
+    .generos-card-productos {
+        grid-area: nuevo;
+        display: flex;
+        margin-top: 2rem;
+        margin-left: -0.5rem;
+        margin-bottom: 4rem;
+        justify-content: center;
+        /* box-shadow: 0px 0px 30px #000000; */
+        text-align: center;
+    }
+
+    .libros .generos-card-productos .card-body-generos:nth-child(2),
+    .libros .generos-card-productos .card-body-generos:nth-child(3),
+    .libros .generos-card-productos .card-body-generos:nth-child(4) {
+      display: none;
+    }
+
+    .card-res {
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        margin-bottom: 10rem;
+        margin-right: 12rem;
+        margin-top: 3rem;
+        box-shadow: 0px 0px 30px #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 90%; */
+    }
+    .contenido-rese {
+        grid-area: nuevo;
+        margin-top: 70px;
+        margin-left: 9.5rem;
+        margin-top: -4rem;
+    }   
+
+    .lateral{
+        display: block;
+    }
+    .lateral-txt {
+        padding-bottom: 5rem;
+    }
+    .form-group {
+        margin-bottom: 10px; 
+        text-align: center;
+    }
+    .lateral-cont{
+        margin-bottom: 2rem;
+    }
+    .contenido-principal {
+        margin: 30px 200px -19px;
+        grid-area: productos;
+    }
+}
+
+@media (min-width:769px) and (max-width: 1024px){
+    .grid-container{
+        display: grid;
+        background-color: #ffffff   ;
+        grid-template-columns: repeat(2,1fr) ;
+        grid-template-rows: 0.25fr 0fr 0fr 0.1fr;
+        grid-template-areas: 
+        "barra         barra"
+        "login         login"
+        "productos     productos"
+        "nuevo         nuevo"
+        "pie           pie" 
+        ;
+    }
+    .grid-container-rese{
+        display: grid;
+        grid-template-columns: repeat(2,1fr) ;
+        grid-template-rows: 0fr 2fr 0fr;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra         barra"
+        "productos     nuevo"
+        "productos     nuevo"
+        "pie           pie" ;
+    
+    }
+    
+    .grid-container-rese-bosque{
+        display: grid;
+        grid-template-columns: repeat(2,1fr) ;
+        grid-template-rows: 0fr 3fr 0fr 1fr;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra         barra"
+        "productos     nuevo"
+        "productos     nuevo"
+        "pie           pie" ;
+
+    }
+    .grid-container-generos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr) ;
+        grid-template-rows: 0fr 0fr 1fr 1fr ;
+        background-color: #ffffff;
+        grid-template-areas: 
+        "barra  barra"
+        "toda   toda"
+        "nuevo  nuevo"
+        "nuevo  nuevo"
+        "pie    pie" ;
+    }
+
+    .generos-card .card-body-generos:nth-last-child(-n+2) {
+        display: none;
+    }
+    .contenido-generos .ficcion .card-body:last-child {
+        display: none;
+    }
+    .generos-card {
+        grid-area: nuevo;
+        display: flex;
+        margin-top: 1rem;
+        margin-left: -0.5rem;
+        margin-bottom: 2rem;
+        justify-content: space-around;
+        /* box-shadow: 0px 0px 30px #000000; */
+        text-align: center;
+    }
+    .card-res-bosque {
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        margin-bottom: 8rem;
+        margin-right: 29rem;
+        box-shadow: 0px 0px 30px #000000;
+        display: flex;
+        margin-top: 5rem;
+        justify-content: center;
+        align-items: center;
+        /* height: 90%; */
+    }
+    .card-res {
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        margin-bottom: 8rem;
+        margin-right: 29rem;
+        box-shadow: 0px 0px 30px #000000;
+        display: flex;
+        margin-top: 5rem;
+        justify-content: center;
+        align-items: center;
+        /* height: 90%; */
+    }
+
+    .sub-title {
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        margin-top: -15rem;
+        margin-bottom: 1.5rem;
+    }
+    .contenido-principal {
+        margin: 30px 200px 257px;
+        grid-area: productos;
+    }
+
+    .navbar--banner {
+        flex-direction: column;
+        height: 350px;
+    }
+    .lateral-txt p{
+        text-align: center;
+        padding: 1rem;
+    }
+    .lateral-cont {
+        padding-bottom: 5rem;
+    } 
+    }
+
+@media (min-width:1025px) and (max-width: 1200px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr) ;
+        grid-template-rows: -0.5fr 1fr 1fr -0.7fr ;
+    }
+
+    .grid-container-rese{
+        display: grid;
+        grid-template-columns: repeat(4,1fr) ;
+        grid-template-rows: -0.5fr 1fr 1fr -0.7fr ;
+    }
+
+    .navbar--banner{
+        flex-direction: column;
+        height: auto;
+    }
+    .lateral-txt p{
+        text-align: center;
+        padding: 1rem;
+    }
+    .sub-title {
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: -0.5rem;
+        /* color: #000000; */
+    }
+
+    .card-res {
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        margin-bottom: 10rem;
+        margin-right: 5rem;
+        box-shadow: 0px 0px 30px #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 90%; */
+    }
+}
+
+@media (min-width:1201px) and (max-width: 1761){
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr) ;
+        grid-template-rows: -0.5fr 1fr 1fr 0.3fr ;
+    }
+
+    .navbar--banner{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .lateral {
+        grid-area: nuevo;
+        margin-top: 3rem;
+    }
+
+    .lateral-txt p{
+        text-align: center;
+        padding: 1rem;
+    }
+    
+}
