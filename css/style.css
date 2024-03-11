@@ -73,7 +73,7 @@
 .titulo{
     grid-area: titulo;
     text-align: center;
-    color: #ddd;
+    color: #743a11;
 }
 body {
     margin: 0;
@@ -164,6 +164,31 @@ nav {
 .navbar-rese{
     grid-area: barra ;
 }
+
+button.custom-buy-btn {
+    background-color: #743a11;
+    color: #fff;
+    border-color: #743a11; /* Color del borde */
+    transition: background-color 0.3s, color 0.3s; /* Agregamos una transición suave */
+    
+    /* Estilos para centrar el contenido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px; /* Ajusta la altura según tu diseño */
+}
+
+button.custom-buy-btn:hover {
+    background-color:  #fbefe5  ;
+    border-color: #743a11;
+    color: #8B4513; 
+}
+
+button.custom-buy-btn:active {
+    background-color: #8B4513; /* Cambia este valor al marrón que desees */
+    border-color: #743a11; /* También aquí, el color del borde al hacer clic */
+}
+
 
 .navbar{
     background-color:  #491a1a40;
@@ -605,15 +630,19 @@ footer img{
         "pie" ;
     }
     .libros .card-body-generos img {
-        width: 100%; /* Ajusta el ancho al 100% del contenedor */
-        max-width: none; /* Elimina el ancho máximo para permitir que la imagen se ajuste al contenedor */
-      }
+        width: 50%;
+        max-width: 100%;
+        border: none;
+    }
     .generos-card .card-body-generos:nth-last-child(-n+3) {
         display: none;
     }
+
     .contenido-generos .ficcion .card-body:nth-child(2),
-    .contenido-generos .ficcion .card-body:nth-child(3) {
-      display: none;
+    .contenido-generos .ficcion .card-body:nth-child(3),
+    .contenido-generos .ficcion .card-body:nth-child(4)
+     {
+        display: none;
     }
     
 
@@ -700,7 +729,7 @@ footer img{
 }
 
 
-@media (min-width:375px) and (max-width: 768px){
+@media (min-width:375px) and (max-width: 424px){
     .grid-container{
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: -0.7fr 1fr 0fr;
@@ -734,15 +763,15 @@ footer img{
         "pie" ;
     }
 
-    .generos-card .card-body-generos:nth-last-child(-n+2) {
+    .generos-card .card-body-generos:nth-last-child(-n+3) {
         display: none;
     }
     .generos-card {
         grid-area: nuevo;
         display: flex;
-        margin-top: 8rem;
-        margin-left: -0.5rem;
-        margin-bottom: 34rem;
+        margin-top: 2rem;
+        margin-left: -0.11rem;
+        margin-bottom: 16rem;
         justify-content: space-between;
         /* box-shadow: 0px 0px 30px #000000; */
         text-align: center;
@@ -760,23 +789,28 @@ footer img{
         "pie" ;
     }
 
-    .generos-card-productos {
-        grid-area: nuevo;
-        display: flex;
-        margin-top: 2rem;
-        margin-left: -0.5rem;
-        margin-bottom: 4rem;
-        justify-content: center;
-        /* box-shadow: 0px 0px 30px #000000; */
-        text-align: center;
+    .libros .card-body-generos img {
+        width: 50%;
+        max-width: 100%;
+        border: none;
+    }
+    .generos-card .card-body-generos:nth-last-child(-n+3) {
+        display: none;
     }
 
-    .libros .generos-card-productos .card-body-generos:nth-child(2),
-    .libros .generos-card-productos .card-body-generos:nth-child(3),
-    .libros .generos-card-productos .card-body-generos:nth-child(4) {
-      display: none;
+    .contenido-generos .ficcion .card-body:nth-child(2),
+    .contenido-generos .ficcion .card-body:nth-child(3),
+    .contenido-generos .ficcion .card-body:nth-child(4)
+     {
+        display: none;
     }
 
+    .generos-card-productos .card-body-generos:nth-child(2),
+    .generos-card-productos .card-body-generos:nth-child(3),
+    .generos-card-productos .card-body-generos:nth-child(4) {
+        display: none; /* Oculta los elementos 2, 3 y 4 en pantallas pequeñas */
+    }
+}
     .card-res {
         grid-area: productos;
         /* width: 185px; */
@@ -815,6 +849,63 @@ footer img{
         margin: 30px 200px -19px;
         grid-area: productos;
     }
+
+
+@media (min-width:425px) and (max-width: 768px){
+    .grid-container{
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: -0.7fr 1fr 0fr;
+        grid-template-areas: 
+        "barra"
+        "login"
+        "productos"
+        "nuevo"
+        "pie";
+    }
+    .contenedor {
+        text-align: center; /* Centrar el contenido horizontalmente */
+    }
+
+    .elemento-a-centrar {
+        margin: 0 auto; /* Centrar el elemento horizontalmente */
+    }
+    .grid-container-generos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 0fr 0fr 1fr 1fr;
+        background-color: #ffffff;
+        grid-template-areas:
+            "barra barra barra barra"
+            "toda toda toda toda"
+            "nuevo nuevo nuevo nuevo"
+            "nuevo nuevo nuevo nuevo"
+            "pie pie pie pie";
+    }
+
+    .generos-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Alinear contenido al centro horizontalmente */
+        text-align: center; /* Alinear texto al centro */
+    }
+
+    .generos-card .card-body-generos {
+        width: 100%; /* Puedes ajustar el ancho según tu preferencia */
+        margin: 0 ; /* Centrar horizontalmente cada tarjeta */
+        margin-bottom: 20px; /* Agregar espacio entre las tarjetas */
+    }
+    .generos-card .card-body-generos {
+        width: 100%; /* Puedes ajustar el ancho según tu preferencia */
+        margin: 0 auto; /* Centrar horizontalmente cada tarjeta */
+        margin-bottom: 20px; /* Agregar espacio entre las tarjetas */
+    }
+    .contenido-generos .ficcion .card-body:nth-child(2),
+    .contenido-generos .ficcion .card-body:nth-child(3),
+    .contenido-generos .ficcion .card-body:nth-child(4)
+    {
+        display: none;
+    }
+    
 }
 
 @media (min-width:769px) and (max-width: 1024px){
