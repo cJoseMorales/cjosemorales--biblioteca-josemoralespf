@@ -8,5 +8,5 @@ Los 5 html que estan listos son
 -Inicio
 -generos
 -productos
--bosque(Se accede dando click al libro con el nombre de a traves del bosque en el index.html)
+-Sobre nosotros
 -aquilestiktok (Se accede dando click al libro con el mismo nombre en el index.html)
