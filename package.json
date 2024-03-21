@@ -1,0 +1,12 @@
+{
+  "name": "pf-biblioteca-josemorales-main---copia",
+  "version": "1.0.0",
+  "description": "Aun no esta implementado el sass ni las animaciones\r no aplico el git ignore ya que de momentos todos los archivos son necesarios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "revision": "sass --watch scss/main.scss css/main.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

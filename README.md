@@ -1,8 +1,6 @@
 #todos los html tienen responsive
 ### Este es un proyecto sobre una biblioteca virtual
-
-Aun no esta implementado el sass ni las animaciones
-no aplico el git ignore ya que de momentos todos los archivos son necesarios
+No aplico el git ignore ya que de momentos todos los archivos son necesario
 
 Los 5 html que estan listos son
 -Inicio

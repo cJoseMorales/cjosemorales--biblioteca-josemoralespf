@@ -1,0 +1,25 @@
+/*footer---------------------------------------------*/
+footer{
+    background-color:  #fbefe5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: pie ;
+}
+
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color: #743a11;
+}
+footer img{
+    /*Tamaño del logo en footer*/
+    width: 2rem;
+}
+
+.custom-search-btn {
+    background-color: #ff0000; 
+    color: #ffffff; 
+  }

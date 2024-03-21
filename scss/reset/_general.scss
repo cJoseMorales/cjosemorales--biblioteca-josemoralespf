@@ -1,0 +1,12 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 0fr 2fr 0.3fr ;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra        barra"
+    "login         login        login        login"
+    "productos     productos    nuevo        nuevo"
+    "productos     productos    nuevo        nuevo"
+    "pie           pie          pie          pie" ;
+}
