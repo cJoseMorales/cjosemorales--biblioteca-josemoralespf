@@ -14,7 +14,7 @@
     .navbar--banner-form {
         margin-top: 1rem;
         width: 86%;
-        background-color: #743a1152;
+        background-color: $color-brown;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -52,7 +52,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 0fr 1fr 1fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "toda"
@@ -76,7 +76,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 0fr 1fr 1fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "libros"
@@ -92,7 +92,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 1fr 0fr 0fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "acerca"
@@ -116,13 +116,14 @@
     }
     
     footer {
-        margin-top: 7rem;
+        margin-top: 2rem;
     }
+
     .grid-container-rese{
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 5fr 4fr;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "productos"
@@ -131,26 +132,57 @@
     }
 
     .card-res {
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        width: 90%;
+        margin-right: 1rem;
+        box-shadow: 0px 0px 30px #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 8rem;
-        margin-right: 14rem;
-    }
-    .contenido-rese {
-        grid-area: nuevo;
-        margin-top: -49px;
-        margin-left: 7rem;
-        /* margin-right: 5rem; */
-        font-size: 18px;
-        margin-right: leg;
     }
 
-    footer {
-        margin-top: 25rem;
+    .contenido-rese {
+        grid-area: nuevo;
+        /* margin-right: 5rem; */
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .contenido-rese .col {
+        border: 5px solid #ddd;
+        padding: 0px;
+        // border-radius: 10px;
+        margin-right: 3rem;
+        width: 90%;
+        margin-left: 1.5rem;
+        margin-top: -4rem;
+    }
+
+    .footer_nosotros{
+        background-color: $color-footer;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 26rem;
+        grid-area: pie;
+    
+    }
+
+    .vueltainicio {
+        margin-top: 9rem;
+        margin-left: auto;
+        margin-right: 8rem;
+        width: 250px;
+        padding: 1rem;
+        text-align: center;
     }
 
 
 }
-
-
 @media (min-width:375px) and (max-width: 424px){
     .grid-container{
         grid-template-columns: repeat(1,1fr) ;
@@ -189,7 +221,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 0fr 1fr 1fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "toda"
@@ -213,7 +245,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 0fr 1fr 1fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "libros"
@@ -229,7 +261,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 1fr 0fr 0fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "acerca"
@@ -255,19 +287,18 @@
     
     
     footer {
-        background-color: #fbefe5;
+        background-color: $color-footer;
         display: flex;
         justify-content: space-around;
         align-items: center;
         grid-area: pie;
-        margin-top: 8rem;
     }
 
     .grid-container-rese{
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 5fr 4fr;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "productos"
@@ -276,24 +307,56 @@
     }
 
     .card-res {
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        width: 90%;
+        margin-right: 1rem;
+        box-shadow: 0px 0px 30px #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 8rem;
-        margin-right: 14rem;
-    }
-    .contenido-rese {
-        grid-area: nuevo;
-        margin-top: -49px;
-        margin-left: 7rem;
-        /* margin-right: 5rem; */
-        font-size: 18px;
-        margin-right: leg;
     }
 
-    footer {
-        margin-top: 25rem;
+    .contenido-rese {
+        grid-area: nuevo;
+        /* margin-right: 5rem; */
+        width: 100%;
+        font-size: 18px;
+    }
+
+
+    .contenido-rese .col {
+        border: 5px solid #ddd;
+        padding: 0px;
+        border-radius: 10px;
+        margin-right: 3rem;
+        width: 90%;
+        margin-left: 1.5rem;
+        margin-top: -4rem;
+        
+    }
+
+    .footer_nosotros {
+        background-color: $color-footer;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .vueltainicio {
+        margin-top: 9rem;
+        margin-left: auto;
+        margin-right: 8rem;
+        width: 250px;
+        padding: 1rem;
+        text-align: center;
     }
 
 }
-
 
 @media (min-width:425px) and (max-width: 768px){
     .grid-container{
@@ -318,6 +381,18 @@
     .elemento-a-centrar {
         margin: 0 auto; /* Centrar el elemento horizontalmente */
     }
+
+    .contenido-principal {
+        margin: 30px 31px 50px;
+        grid-area: productos;
+    }
+
+    .lateral {
+        grid-area: nuevo;
+        margin-top: -13rem;
+
+    }
+    
     .lateral-cont {
         display: flex;
         padding-top: 45px;
@@ -331,7 +406,7 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: 0fr 0fr 1fr 1fr;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas:
             "barra"
             "toda"
@@ -359,7 +434,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 0fr 1fr 1fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "libros"
@@ -375,7 +450,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 1fr 0fr 0fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "acerca"
@@ -392,6 +467,7 @@
         margin-top: -12rem;
         width: 34rem;
         height: 85%;
+        width: 100%;
         margin-right: 2rem;
         display: flex;
         flex-direction: column;
@@ -401,19 +477,18 @@
     
     
     footer {
-        background-color: #fbefe5;
+        background-color: $color-footer;
         display: flex;
         justify-content: space-around;
         align-items: center;
         grid-area: pie;
-        margin-top: 8rem;
     }
 
     .grid-container-rese{
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
-        grid-template-rows: 0fr 6fr 4fr;
-        background-color: #ffffff;
+        grid-template-rows: 0fr 5fr 4fr;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "productos"
@@ -422,20 +497,44 @@
     }
 
     .card-res {
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        /* width: 88%; */
+        box-shadow: 0px 0px 30px #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 8rem;
-        margin-right: 14rem;
-    }
-    .contenido-rese {
-        grid-area: nuevo;
-        margin-top: -49px;
-        margin-left: 7rem;
-        /* margin-right: 5rem; */
-        font-size: 18px;
-        margin-right: leg;
     }
 
-    footer {
-        margin-top: 25rem;
+    .contenido-rese {
+        grid-area: nuevo;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-right: 5rem; */
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .contenido-rese .col {
+        border: 5px solid #ddd;
+        border-radius: 10px;
+        margin-right: 0rem;
+        margin-top: -4rem;
+        margin-bottom: 8rem;
+    }
+
+    .vueltainicio {
+        margin-top: 9rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        padding: 1rem;
+        text-align: center;
     }
 }
 
@@ -443,7 +542,7 @@
 
     .grid-container{
         display: grid;
-        background-color: #ffffff   ;
+        background-color: $background-white;
         grid-template-columns: repeat(2,1fr) ;
         grid-template-rows: 0.25fr 0fr 0fr -0.9fr;
         grid-template-areas: 
@@ -458,7 +557,7 @@
     .navbar--banner-form {
         margin-top: -1rem;
         width: 81%;
-        background-color: #743a1152;
+        background-color: $color-brown;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -496,7 +595,7 @@
         display: grid;
         grid-template-columns: repeat(2,1fr) ;
         grid-template-rows: 0fr 0fr 1fr 1fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra  barra"
         "toda   toda"
@@ -520,7 +619,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 0fr 1fr 1fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra        barra"
         "libros       libros"
@@ -541,7 +640,7 @@
         display: grid;
         grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 1fr 0fr 0fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra"
         "acerca"
@@ -549,59 +648,82 @@
         "pie" ;
     }
 
+    .direccion {
+        margin-top: -11rem;
+        margin-right: 1rem;
+        width: 100%;
+    }
+    
     .direccion > div:first-child {
         display: none;
     }
 
-    .direccion {
-        margin-top: -11rem;
-        margin-right: 1rem;
-        margin-left: 9rem;
-    }
-    
+
     
     footer {
-        background-color: #fbefe5;
+        background-color: $color-footer;
         display: flex;
         justify-content: space-around;
         align-items: center;
         grid-area: pie;
-        margin-top: 8rem;
     }
 
     .grid-container-rese{
         display: grid;
-        grid-template-columns: repeat(2,1fr) ;
-        grid-template-rows: 0fr 1fr 4fr;
+        grid-template-columns: repeat(1,1fr) ;
+        grid-template-rows: 0fr 5fr 4fr;
+        background-color: $background-white;
         grid-template-areas: 
-        "barra           barra"
-        "productos       nuevo"
-        "productos       nuevo"
-        "pie             pie" ;
+        "barra"
+        "productos"
+        "nuevo"
+        "pie" ;
     }
 
     .card-res {
-        margin-top: 15rem;
-        margin-right: -24rem;
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        /* width: 88%; */
+        box-shadow: 0px 0px 30px #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8rem;
     }
 
     .contenido-rese {
-        margin-top: -49px;
-        margin-left: 30rem;
-        margin-top: 16rem;
-}
+        grid-area: nuevo;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-right: 5rem; */
+        width: 100%;
+        font-size: 18px;
+    }
+
     .contenido-rese .col {
-        margin-right: -3rem;
+        border: 5px solid #ddd;
+        border-radius: 10px;
+        margin-right: 0rem;
+        margin-top: -4rem;
+        margin-bottom: 8rem;
     }
 
-    footer {
-        margin-top: 25rem;
+    .vueltainicio {
+        margin-top: 9rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        padding: 1rem;
+        text-align: center;
     }
-
-
 }
 
 @media (min-width:1025px) and (max-width: 1200px){
+
     .grid-container{
         display: grid;
         grid-template-columns: repeat(4,1fr) ;
@@ -621,6 +743,11 @@
         height: auto;
     }
 
+    .contenido-principal {
+        margin: 8px 25px 50px;
+        grid-area: productos;
+    }
+
     .lateral-txt p{
         text-align: center;
         padding: 1rem;
@@ -634,17 +761,30 @@
         /* color: #000000; */
     }
 
+
     .grid-container-generos{
         display: grid;
-        grid-template-columns: repeat(4,1fr) ;
-        grid-template-rows: -0.5fr 1fr 1fr -0.7fr ;
+        grid-template-columns: repeat(2,1fr) ;
+        grid-template-rows: 0fr 0fr 1fr 1fr ;
+        background-color: $background-white;
+        grid-template-areas: 
+        "barra  barra"
+        "toda   toda"
+        "nuevo  nuevo"
+        "nuevo  nuevo"
+        "pie    pie" ;
     }
+    .navbar {
 
+        width: auto;
+    }
+    
     .generos-card {
         justify-content: space-around;
+        margin-top: 4rem;
     }
 
-    .contenido-generos .ficcion .card-body:nth-child(-n+2) {
+    .contenido-generos .ficcion .card-body:nth-child(-n+1) {
         display: none;
     }
 
@@ -654,16 +794,23 @@
 
     .grid-container-productos{
         display: grid;
-        grid-template-columns: repeat(4,1fr) ;
+        grid-template-columns: repeat(1,1fr) ;
         grid-template-rows: 0fr 0fr 1fr 1fr ;
+        background-color: $background-white;
+        grid-template-areas: 
+        "barra        barra"
+        "libros       libros"
+        "libros       libros"
+        "libros       libros"
+        "pie          pie";
     }
     
-    .libros {
-        .generos-card-productos {
-            .card-body-generos:nth-child(-n+2) {
-                display: none;
-            }
-        }
+    .libros .generos-card-productos .card-body-generos:nth-child(-n+2) {
+        display: none;
+    }
+    
+    .generos-card-productos {
+        justify-content: space-around;
     }
 
     .generos-card-productos {
@@ -674,11 +821,16 @@
         display: grid;
         grid-template-columns: repeat(3,1fr) ;
         grid-template-rows: 0fr 1fr 0fr 0fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra         barra        barra "
         "acerca        acerca       direccion "
         "pie           pie          pie " ;
+    }
+
+    .direccion {
+        margin-top: 2rem;
+        margin-right: 4rem;
     }
 
     .direccion > .direccion {
@@ -689,42 +841,46 @@
         display: none;
     }
 
-    .grid-container-rese{
-        display: grid;
-        grid-template-columns: repeat(2,1fr) ;
-        grid-template-rows: 0fr 1fr 4fr;
-        grid-template-areas: 
-        "barra           barra"
-        "productos       nuevo"
-        "productos       nuevo"
-        "pie             pie" ;
-    }
-
     .card-res {
-        margin-top: 8rem;
-        margin-right: -24rem;
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        /* width: 88%; */
+        box-shadow: 0px 0px 30px #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10rem;
     }
 
     .contenido-rese {
-        margin-top: -49px;
-        margin-left: 30rem;
-        margin-top: 8rem;
-    }
-    .contenido-rese .col {
-        margin-right: -1rem;
-    }
-    footer {
-        margin-top: 25rem;
+        grid-area: nuevo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-right: 5rem; */
+        margin-bottom: 10rem;
+        font-size: 18px;
     }
 
 
+    .vueltainicio {
+        margin-top: 9rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        padding: 1rem;
+        text-align: center;
+    }
+    
 }
 
-@media (min-width:1201px) and (max-width: 1761px){
+@media (min-width:1201px) and (max-width: 1476px){
 
     .grid-container{
         display: grid;
-        background-color: #ffffff   ;
+        background-color: $background-white;
         grid-template-columns: repeat(2,1fr) ;
         grid-template-rows: 0.25fr 0fr 0fr 0.1fr;
         grid-template-areas: 
@@ -739,7 +895,7 @@
     .navbar--banner-form {
         margin-top: 1rem;
         width: 46%;
-        background-color: #743a1152;
+        background-color: $color-brown;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -751,7 +907,7 @@
 
     .lateral {
         grid-area: nuevo;
-        margin-top: 3rem;
+        margin-top: -2rem;
         margin-bottom: 2rem;
     }
 
@@ -759,6 +915,19 @@
         text-align: center;
         padding: 1rem;
     }
+    .grid-container-generos{
+        display: grid;
+        grid-template-columns: repeat(4,1fr) ;
+        grid-template-rows: 0fr 0fr 1fr 1fr ;
+        background-color: $background-white;
+        grid-template-areas: 
+        "barra         barra        barra          barra"
+        "toda          toda         toda           toda"
+        "nuevo         nuevo        nuevo          nuevo"
+        "nuevo         nuevo        nuevo          nuevo"
+        "pie           pie          pie            pie" ;
+    }
+    
     .generos-card .card-body-generos:nth-last-child(-n+1) {
         display: none;
     }
@@ -774,6 +943,19 @@
 
     .generos-card {
         justify-content: space-around;
+    }
+    
+    .grid-container-productos{
+        display: grid;
+        grid-template-columns: repeat(4,1fr) ;
+        grid-template-rows: 0fr 0fr 1fr 1fr ;
+        background-color: $background-white;
+        grid-template-areas: 
+        "barra         barra        barra          barra"
+        "libros        libros       libros         libros"
+        "libros        libros       libros         libros"
+        "libros        libros       libros         libros"
+        "pie           pie          pie            pie" ;
     }
 
     .grid-container-productos{
@@ -793,47 +975,72 @@
         display: grid;
         grid-template-columns: repeat(3,1fr) ;
         grid-template-rows: 0fr 1fr 0fr 0fr ;
-        background-color: #ffffff;
+        background-color: $background-white;
         grid-template-areas: 
         "barra         barra        barra "
         "acerca        acerca       direccion "
         "pie           pie          pie " ;
     }
 
-    .direccion > .direccion {
-        display: none;
-    }
+    // .direccion > .direccion {
+    //     display: none;
+    // }
 
-    .contenido-nosotros > div:nth-child(2) {
-        display: none;
+    // .contenido-nosotros > div:nth-child(2) {
+    //     display: none;
+    // }
+
+    .direccion {
+        margin-top: 2rem;
+        height: 78%;
+        width: 100%;
+        margin-right: 2rem;
     }
 
     .grid-container-rese{
         display: grid;
-        grid-template-columns: repeat(2,1fr) ;
+        grid-template-columns: repeat(4,1fr) ;
         grid-template-rows: 0fr 1fr 4fr;
-        grid-template-areas: 
-        "barra           barra"
-        "productos       nuevo"
-        "productos       nuevo"
-        "pie             pie" ;
     }
 
     .card-res {
-        margin-top: 8rem;
-        margin-right: -24rem;
+        grid-area: productos;
+        /* width: 185px; */
+        overflow: hidden;
+        margin: auto;
+        /* width: 88%; */
+        box-shadow: 0px 0px 30px #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10rem;
     }
 
     .contenido-rese {
-        margin-top: -49px;
-        margin-left: 44rem;
-        margin-top: 8rem;
-    }
-    .contenido-rese .col {
-        margin-right: -1rem;
-    }
-    footer {
-        margin-top: 25rem;
+        grid-area: nuevo;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-right: 5rem; */
+        margin-bottom: 10rem;
+        font-size: 18px;
     }
 
+    footer {
+        background-color: $color-footer;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: pie;
+        margin-top: 2rem;
+    }
+
+    .vueltainicio {
+        margin-top: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        padding: 1rem;
+        text-align: center;
+    }
 }

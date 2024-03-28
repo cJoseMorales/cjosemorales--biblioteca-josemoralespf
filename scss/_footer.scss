@@ -1,25 +1,51 @@
 /*footer---------------------------------------------*/
-footer{
-    background-color:  #fbefe5;
+footer {
+    background-color: $color-footer;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    grid-area: pie ;
-}
+    grid-area: pie;
 
-footer ul li{
-    list-style: none;
-}
-footer ul li a{
-    text-decoration: none;
-    color: #743a11;
-}
-footer img{
-    /*Tamaño del logo en footer*/
-    width: 2rem;
+
+    ul li {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: #743a11;
+        }
+    }
+
+    img {
+        /*Tamaño del logo en footer*/
+        width: 2rem;
+    }
 }
 
 .custom-search-btn {
-    background-color: #ff0000; 
-    color: #ffffff; 
-  }
+    background-color: $rojo-fuerte;
+    color: $background-white;
+}
+
+.footer_nosotros{
+    background-color: $color-footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -4rem;
+    grid-area: pie;
+
+
+    ul li {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: $color-marroclaro;
+        }
+    }
+    img {
+        width: 7rem;
+    }
+
+}

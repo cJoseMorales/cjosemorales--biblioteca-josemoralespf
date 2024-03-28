@@ -10,3 +10,53 @@
     "productos     productos    nuevo        nuevo"
     "pie           pie          pie          pie" ;
 }
+
+.grid-container-rese{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 2fr 3fr;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra        barra"
+    "productos     productos    nuevo        nuevo"
+    "productos     productos    nuevo        nuevo"
+    "pie           pie          pie          pie" ;
+}
+
+.grid-container-generos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 0fr 1fr 1fr ;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra          barra"
+    "toda          toda         toda           toda"
+    "nuevo         nuevo        nuevo          nuevo"
+    "nuevo         nuevo        nuevo          nuevo"
+    "pie           pie          pie            pie" ;
+}
+
+.grid-container-productos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 0fr 1fr 1fr ;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra          barra"
+    "libros        libros       libros         libros"
+    "libros        libros       libros         libros"
+    "libros        libros       libros         libros"
+    "pie           pie          pie            pie" ;
+}
+
+.grid-container-nosotros{
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    grid-template-rows: 0fr 1fr 0fr 0fr ;
+    background-color: #ffffff;
+    grid-template-areas: 
+    "barra         barra        barra          barra"
+    "acerca        acerca       direccion      direccion"
+    "servicio      servicio     direccion      direccion"
+    "pie           pie          pie            pie" ;
+}
